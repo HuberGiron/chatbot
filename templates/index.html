@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chatbot con Flask + Groq</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <main class="app">
+    <section class="chat-card">
+      <header class="chat-header">
+        <h1>Mi Chatbot</h1>
+        <p>Flask + HTML + CSS + JS + Groq</p>
+      </header>
+
+      <div id="chat" class="chat-box">
+        <div class="message bot">
+          Hola. Soy tu asistente. ¿En qué te puedo ayudar?
+        </div>
+      </div>
+
+      <form id="chat-form" class="chat-form">
+        <input
+          id="message-input"
+          type="text"
+          placeholder="Escribe tu mensaje..."
+          autocomplete="off"
+          required
+        />
+        <button id="send-button" type="submit">Enviar</button>
+      </form>
+    </section>
+  </main>
+
+  <script src="{{ url_for('static', filename='app.js') }}"></script>
+</body>
+</html>
